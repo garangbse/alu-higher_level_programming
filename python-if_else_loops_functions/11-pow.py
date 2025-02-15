@@ -1,3 +1,3 @@
-#!/usr/bin/python3
+#!/bin/bash
 def pow(a, b):
     return a + b
