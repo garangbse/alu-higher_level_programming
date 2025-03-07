@@ -99,7 +99,7 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Return a string representation of the rectangle to recreate a new instance
+        Return a string a rectangle to recreate a new instance
         Returns:
             str: string representation of the rectangle
         """

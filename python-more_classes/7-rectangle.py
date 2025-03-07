@@ -66,7 +66,7 @@ class Rectangle:
         """Return a string representation of the rectangle."""
         if self.width == 0 or self.height == 0:
             return ""
-        
+
         symbol = str(self.print_symbol)
         return '\n'.join([symbol * self.width for _ in range(self.height)])
 
