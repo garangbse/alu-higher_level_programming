@@ -2,6 +2,7 @@
 """Module that contains a function that lists all attributes and methods
 of an object"""
 
+
 def lookup(obj):
     """Returns a list of available attributes and methods of an object
 
