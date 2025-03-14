@@ -14,3 +14,4 @@ def read_file(filename=""):
             The read_file function reads and prints the contents of a text file.
             """
             return "File handling module"
+        
