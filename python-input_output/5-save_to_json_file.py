@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-Function to convert JSON string to Python object
+Function to save object to JSON file
 """
 import json
 
 
-def from_json_string(my_str):
+def save_to_json_file(my_obj, filename):
     """
-    Returns Python data structure from JSON string.
+    Writes an Object to a text file using JSON representation
     """
-    return json.loads(my_str)
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
