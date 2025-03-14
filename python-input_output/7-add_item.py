@@ -1,24 +1,24 @@
 #!/usr/bin/python3
 """
-This module provides a script that adds all command-line arguments
-to a Python list and saves them to a JSON file. The list is stored
-in 'add_item.json' and persists across multiple script executions.
-
-Functions:
-- Uses save_to_json_file() from 5-save_to_json_file.py to save data.
-- Uses load_from_json_file() from 6-load_from_json_file.py to load data.
+Script that adds all arguments to a Python list and saves to a file
 """
 import sys
+import os.path
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-    load_from_json_file = \
-        __import__('6-load_from_json_file').load_from_json_file
+# Import functions from previous modules
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-    try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
+filename = "add_item.json"
 
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+# Create an empty list if file doesn't exist
+if os.path.exists(filename):
+    my_list = load_from_json_file(filename)
+else:
+    my_list = []
+
+# Add command line arguments to the list
+my_list.extend(sys.argv[1:])
+
+# Save the updated list to the file
+save_to_json_file(my_list, filename)
