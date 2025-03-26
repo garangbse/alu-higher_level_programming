@@ -1,7 +1,8 @@
+#!/usr/bin/python3
 import requests
 import sys
 
-#!/usr/bin/python3
+
 """
 Script that sends a POST request to a URL with an email parameter
 and displays the response body

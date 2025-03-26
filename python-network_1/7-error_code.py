@@ -1,7 +1,8 @@
+#!/usr/bin/python3
 import requests
 import sys
 
-#!/usr/bin/python3
+
 """
 Script that takes in a URL, sends a request and displays the body of the response.
 Handles HTTP status codes >= 400 by printing the error code.

@@ -1,6 +1,7 @@
+#!/usr/bin/python3
 import requests
 
-#!/usr/bin/python3
+
 """Script that fetches https://alu-intranet.hbtn.io/status using requests package"""
 
 

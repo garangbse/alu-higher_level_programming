@@ -1,6 +1,7 @@
+#!/usr/bin/python3
 import sys
 
-#!/usr/bin/python3
+
 """Script that fetches URL and handles HTTP errors"""
 import urllib.request
 import urllib.error

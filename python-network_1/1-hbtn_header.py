@@ -1,6 +1,7 @@
+#!/usr/bin/python3
 import sys
 
-#!/usr/bin/python3
+
 """
 Script that takes a URL, sends a request and displays X-Request-Id from header
 """
