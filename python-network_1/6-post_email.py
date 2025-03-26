@@ -1,22 +1,15 @@
 #!/usr/bin/python3
+"""
+Script to POST an email address to a URL
+"""
 import requests
 import sys
-
-
-"""
-Script that sends a POST request to a URL with an email parameter
-and displays the response body
-"""
-
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
-    
-    # Create payload dictionary with email parameter
-    payload = {'email': email}
-    
-    # Send POST request with email parameter
-    response = requests.post(url, data=payload)
-    
-    # Display response body
-    print(response.text)
+    # Setup post data
+    data = {'email': email}
+    # Send request
+    r = requests.post(url, data=data)
+    # Show response
+    print(r.text)

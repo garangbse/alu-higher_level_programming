@@ -1,22 +1,20 @@
 #!/usr/bin/python3
-import sys
-
-
 """
-Script that sends a POST request to a URL with an email parameter
-and displays the response body
+Script to POST email using urllib
 """
 import urllib.request
 import urllib.parse
+import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
 
-    # Prepare the data for POST request
+    # Format data for POST
     data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-    
-    # Create the request and send it
+
+    # Send request
     with urllib.request.urlopen(url, data=data) as response:
-        # Read and decode the response body
-        print(response.read().decode('utf-8'))
+        # Get response
+        body = response.read().decode('utf-8')
+        print(body)

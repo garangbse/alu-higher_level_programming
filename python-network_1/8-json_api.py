@@ -1,40 +1,25 @@
 #!/usr/bin/python3
+"""
+Script to search for users with a given letter
+"""
 import requests
 import sys
-
-
-"""
-Script that sends a POST request to search for a user
-"""
-
-
 if __name__ == "__main__":
-    # Get the letter from command line argument or use empty string
+    # Get search term or use empty
     q = sys.argv[1] if len(sys.argv) > 1 else ""
-    
-    # Define the URL and payload
+    # Server endpoint
     url = "http://0.0.0.0:5000/search_user"
-    payload = {'q': q}
-
+    # Post the search term
+    r = requests.post(url, data={'q': q})
+    # Handle response
     try:
-        # Send POST request
-        response = requests.post(url, data=payload)
-        
-        # Try to parse JSON response
-        try:
-            json_response = response.json()
-            
-            # Check if response is empty
-            if json_response:
-                print("[{}] {}".format(
-                    json_response.get('id'),
-                    json_response.get('name')
-                ))
-            else:
-                print("No result")
-                
-        except ValueError:
-            print("Not a valid JSON")
-            
-    except Exception as e:
-        print(e)
+        response_json = r.json()
+        # Check if we got results
+        if response_json:
+            print("[{}] {}".format(
+                response_json.get('id'),
+                response_json.get('name')))
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
