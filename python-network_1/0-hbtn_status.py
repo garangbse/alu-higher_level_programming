@@ -1,27 +1,15 @@
 #!/usr/bin/python3
 """
-Script that gets the Holberton intranet status page
+Script that fetches https://alu-intranet.hbtn.io/status
 """
 import urllib.request
 
 
 if __name__ == "__main__":
-    try:
-        # Try local server
-        url = "http://0.0.0.0:5050/status"
-        with urllib.request.urlopen(url) as response:
-            body = response.read()
-    except:
-        try:
-            # Fallback to production URL
-            url = "https://intranet.hbtn.io/status"
-            with urllib.request.urlopen(url) as response:
-                body = response.read()
-        except:
-            # Use dummy response if everything fails
-            body = b'OK'
-
-    # Format response data
+    url = "https://alu-intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        body = response.read()
+    
     print("Body response:")
     print("\t- type: {}".format(type(body)))
     print("\t- content: {}".format(body))
