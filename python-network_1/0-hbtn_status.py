@@ -14,7 +14,7 @@ if __name__ == "__main__":
     except:
         try:
             # Fallback to production URL
-            url = "https://intranet.hbtn.io/status"
+            url = "https://alx-intranet.hbtn.io/status"
             with urllib.request.urlopen(url) as response:
                 body = response.read()
         except:
