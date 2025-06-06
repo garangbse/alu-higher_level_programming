@@ -6,6 +6,6 @@ let counter = 0;
 
 // The logMe function as specified in the prototype
 exports.logMe = function (item) {
-    console.log(`${counter}: ${item}`);
-    counter++; // Increment counter after logging
+  console.log(`${counter}: ${item}`);
+  counter++; // Increment counter after logging
 };
