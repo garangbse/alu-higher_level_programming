@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bbe27bb-ac17-41e8-9f55-557fb2b277cc" name="Changes" comment="added print message to no.0">
-      <change beforePath="$PROJECT_DIR$/javascript-warm_up/0-javascript_is_amazing.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript-warm_up/0-javascript_is_amazing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749213758404</updated>
       <workItem from="1749213759660" duration="946000" />
-      <workItem from="1749214726332" duration="553000" />
+      <workItem from="1749214726332" duration="1434000" />
     </task>
     <task id="LOCAL-00001" summary="added print message to no.0">
       <option name="closed" value="true" />
